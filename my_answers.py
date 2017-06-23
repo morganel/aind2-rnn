@@ -31,7 +31,7 @@ def window_transform_series(series,window_size):
 # TODO: build an RNN to perform regression on our time series input/output data
 def build_part1_RNN(step_size, window_size):
     model = Sequential()
-    model.add(LSTM(32, input_shape=(7, 1)))
+    model.add(LSTM(5, input_shape=(window_size, 1)))
     model.add(Dense(1))
     return model
 
